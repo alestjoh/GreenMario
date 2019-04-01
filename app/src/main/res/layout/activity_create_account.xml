@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkBackground"
+    tools:context=".CreateAccountActivity" >
+
+    <ImageView
+        android:id="@+id/iv_title_bar_create"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        tools:ignore="ContentDescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@color/colorPrimaryDark" />
+
+    <TextView
+        android:id="@+id/tv_title_create"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="@string/create_account"
+        android:textColor="@color/lightText"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_title_bar_create"
+        app:layout_constraintEnd_toEndOf="@+id/iv_title_bar_create"
+        app:layout_constraintStart_toStartOf="@+id/iv_title_bar_create"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_back_create"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="?attr/actionModeCloseDrawable"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_title_bar_create"
+        app:layout_constraintStart_toStartOf="@+id/iv_title_bar_create"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/ll_account_info_create"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_title_bar_create">
+
+        <TextView
+            android:id="@+id/tv_email_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/email_address"
+            android:textColor="@color/lightText"
+            android:textSize="24sp" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/et_email_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/email_address"
+                android:background="@color/lightBackground"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColor="@color/darkText"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_email_judgment_create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/et_email_create"
+                app:layout_constraintEnd_toEndOf="@+id/et_email_create"
+                app:layout_constraintTop_toTopOf="@+id/et_email_create"
+                app:srcCompat="@drawable/tick" />
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_password_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/create_password"
+            android:textColor="@color/lightText"
+            android:textSize="24sp" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/et_password_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/email_address"
+                android:background="@color/lightBackground"
+                android:ems="10"
+                android:hint="@string/see_below"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/darkText"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_password_judgment_create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/et_password_create"
+                app:layout_constraintEnd_toEndOf="@+id/et_password_create"
+                app:layout_constraintTop_toTopOf="@+id/et_password_create"
+                app:srcCompat="@drawable/tick" />
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_password_confirm_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="@string/repeat_password"
+            android:textColor="@color/lightText"
+            android:textSize="24sp" />
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/et_password_confirm_create"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:autofillHints="@string/email_address"
+                android:background="@color/lightBackground"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/darkText"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_password_confirm_judgment_create"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/et_password_confirm_create"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/et_password_confirm_create"
+                app:srcCompat="@drawable/tick" />
+        </android.support.constraint.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/tv_password_criteria_create"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/password_criteria"
+            android:textColor="@color/lightText"
+            android:layout_marginTop="32dp"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_next_create"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/gradient_button_background"
+            android:enabled="false"
+            android:text="@string/next"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
